@@ -13,4 +13,4 @@ node ../test_shit.js > ./node-10-results.txt
 # results written to file node-10-results.txt
 ```
 
-The `node-8` and `node-10` folders here contain the requisite `.nvmrc` files and the output as text files forthe most recent run on each version.
+The `node-8` and `node-10` folders here contain the requisite `.nvmrc` files and the output as text files for the most recent run on each version.
