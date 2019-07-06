@@ -1,0 +1,335 @@
+Piping now
+Event 'pipe' received on TestWritableStream: event data = {
+  "_readableState": {
+    "objectMode": false,
+    "highWaterMark": 16384,
+    "buffer": {
+      "head": null,
+      "tail": null,
+      "length": 0
+    },
+    "length": 0,
+    "pipes": {
+      "_writableState": {
+        "objectMode": false,
+        "highWaterMark": 16384,
+        "finalCalled": false,
+        "needDrain": false,
+        "ending": false,
+        "ended": false,
+        "finished": false,
+        "destroyed": false,
+        "decodeStrings": true,
+        "defaultEncoding": "utf8",
+        "length": 0,
+        "writing": false,
+        "corked": 0,
+        "sync": true,
+        "bufferProcessing": false,
+        "writecb": null,
+        "writelen": 0,
+        "bufferedRequest": null,
+        "lastBufferedRequest": null,
+        "pendingcb": 0,
+        "prefinished": false,
+        "errorEmitted": false,
+        "bufferedRequestCount": 0,
+        "corkedRequestsFree": {
+          "next": null,
+          "entry": null
+        }
+      },
+      "writable": true,
+      "domain": null,
+      "_events": {
+        "unpipe": [
+          null,
+          null
+        ],
+        "drain": [
+          null,
+          null
+        ],
+        "close": [
+          null,
+          null
+        ],
+        "error": [
+          null,
+          null
+        ],
+        "finish": [
+          null,
+          null
+        ]
+      },
+      "_eventsCount": 7,
+      "bufferedData": []
+    },
+    "pipesCount": 1,
+    "flowing": true,
+    "ended": false,
+    "endEmitted": false,
+    "reading": false,
+    "sync": true,
+    "needReadable": true,
+    "emittedReadable": false,
+    "readableListening": true,
+    "resumeScheduled": true,
+    "destroyed": false,
+    "defaultEncoding": "utf8",
+    "awaitDrain": 0,
+    "readingMore": false,
+    "decoder": null,
+    "encoding": null
+  },
+  "readable": true,
+  "domain": null,
+  "_events": {
+    "readable": [
+      null,
+      null
+    ],
+    "data": [
+      null,
+      null
+    ],
+    "end": [
+      null,
+      null
+    ]
+  },
+  "_eventsCount": 5
+}
+Piped, but no data sent yet
+Pushing data to TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+TestReadableStream.read() called. Calling super.read()
+Data successfully pushed TestReadableStream processStdout
+Completed pushing data to TestReadableStream processStdout
+Pushing null to TestReadableStream processStdout to end stream
+TestReadableStream.read() called. Calling super.read()
+SCRIPT COMPLETE.
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 0 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 0 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 1 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 1 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 2 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 2 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 3 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 3 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 4 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 4 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 5 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 5 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 6 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 6 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 7 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 7 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 8 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 8 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 9 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 9 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 10 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 10 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 11 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 11 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 12 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 12 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 13 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 13 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 14 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 14 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 15 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 15 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 16 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 16 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 17 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 17 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 18 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 18 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 19 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 19 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 20 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 20 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 21 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 21 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 22 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 22 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 23 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 23 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 24 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 24 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 25 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 25 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 26 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 26 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 27 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 27 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 28 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 28 >>"
+}
+Event 'data' received on TestReadableStream: event data = "<< Data chunk # 29 >>"
+Event 'update' received on TestWritableStream progressObj: event data = {
+  "data": "<< Data chunk # 29 >>"
+}
+Event 'readable' received on TestReadableStream: event data = undefined
+Event 'end' received on TestReadableStream: event data = undefined
+Event 'finish' received on TestWritableStream: event data = undefined
+Event '{"hasUnpiped":false}' received on TestWritableStream: event data = {
+  "_readableState": {
+    "objectMode": false,
+    "highWaterMark": 16384,
+    "buffer": {
+      "head": null,
+      "tail": null,
+      "length": 0
+    },
+    "length": 0,
+    "pipes": null,
+    "pipesCount": 0,
+    "flowing": false,
+    "ended": true,
+    "endEmitted": true,
+    "reading": false,
+    "sync": true,
+    "needReadable": false,
+    "emittedReadable": false,
+    "readableListening": true,
+    "resumeScheduled": false,
+    "destroyed": false,
+    "defaultEncoding": "utf8",
+    "awaitDrain": 0,
+    "readingMore": false,
+    "decoder": null,
+    "encoding": null
+  },
+  "readable": false,
+  "domain": null,
+  "_events": {
+    "readable": [
+      null,
+      null
+    ],
+    "data": [
+      null,
+      null,
+      null
+    ]
+  },
+  "_eventsCount": 5
+}
