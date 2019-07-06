@@ -14,3 +14,11 @@ node ../test_shit.js > ./node-10-results.txt
 ```
 
 The `node-8` and `node-10` folders here contain the requisite `.nvmrc` files and the output as text files for the most recent run on each version.
+
+**NOTE:** You'll need the node versions installed. To do that, you can use the following shell commands:
+```{bash}
+nvm install "$(cat ./node-8/.nvmrc)"
+# => ... install output for node 8
+nvm install "$(cat ./node-10/.nvmrc)"
+# => ... install output for node 10
+```
