@@ -54,6 +54,42 @@ class TestReadableStream extends Readable {
 }
 
 /**
+ * Test readable stream class (for internal use in testing only)
+ */
+class TestReadableStreamNoReadableEventHandlers extends Readable {
+  /**
+   * Constructor
+   * @param {Object} opts - options for the Readable stream 
+   * 
+   * @returns {TestReadableStream} - the object instance
+   */
+  constructor (opts) {
+    super(opts);
+    for (let e of ['data', 'close', 'error', 'end']) {
+      this.on(e, (data, eventName = e) => console.log(`Event '${typeof eventName === 'string' ? eventName : JSON.stringify(eventName)}' received on TestReadableStreamNoReadableEventHandlers: event data = ${JSON.stringify(data instanceof Buffer ? data.toString() : data, null, 2)}`));
+    }
+  }
+  /**
+   * Required _read method of Readable interface. Logging no-op.
+   * 
+   * @returns {void}
+   */
+  _read () {
+    console.log('TestReadableStreamNoReadableEventHandlers._read() called.');
+  }
+  
+  /**
+   * Wrapping read method of Readable interface. Logging no-op.
+   * 
+   * @returns {void}
+  read () {
+    console.log('TestReadableStreamNoReadableEventHandlers.read() called. Calling super.read()');
+    super.read();
+  }
+   */
+}
+
+/**
  * A test Writable class that emits on write
  */
 class TestWritableStream extends Writable {
@@ -91,24 +127,42 @@ class TestWritableStream extends Writable {
     this.emit('update', { data: data });
     callback();
   }
+  
+  /**
+   * Wrapping push method of Writable interface. Logging no-op.
+   * @param {Buffer} chunk - the chunk to be pushed onto the stream
+   * @param {string} encoding - the encoding of the chunk
+   * 
+   * @returns {boolean} - true if successful, false if not
+   */
+  push (chunk, encoding) {
+    console.log(`TestWritableStream.push(...) called with arguments ${JSON.stringify({chunk: chunk, encoding: encoding})}. Calling super.push(...)`);
+    return super.push(chunk, encoding);
+  }
 }
 
-const processStdout = new TestReadableStream();
-const progressObj = new TestWritableStream();
-progressObj.on('update', (data) => console.log(`Event 'update' received on TestWritableStream progressObj: event data = ${JSON.stringify(data, null, 2)}`));
+const readableStreams = {
+  TestReadableStream: new TestReadableStream(),
+  TestReadableStreamNoReadableEventHandlers: new TestReadableStreamNoReadableEventHandlers()
+};
 
-console.log('Piping now');
-processStdout.pipe(progressObj);
-console.log('Piped, but no data sent yet');
-
-console.log('Pushing data to TestReadableStream processStdout');
-for (let k = 0; k < 30; k++) {
-  console.log(`Data${processStdout.push(`<< Data chunk # ${k} >>`) ? '' : ' NOT'} successfully pushed TestReadableStream processStdout`);
+for (let [streamClass, processStdout] of Object.entries(readableStreams)) {
+  const progressObj = new TestWritableStream();
+  progressObj.on('update', (data) => console.log(`Event 'update' received on ${streamClass} progressObj: event data = ${JSON.stringify(data, null, 2)}`));
+  
+  console.log('Piping now');
+  processStdout.pipe(progressObj);
+  console.log('Piped, but no data sent yet');
+  
+  console.log(`Pushing data to ${streamClass} processStdout`);
+  for (let k = 0; k < 30; k++) {
+    console.log(`Data${processStdout.push(`<< Data chunk # ${k} >>`) ? '' : ' NOT'} successfully pushed ${streamClass} processStdout`);
+  }
+  console.log(`Completed pushing data to ${streamClass} processStdout`);
+  console.log(`Pushing null to ${streamClass} processStdout to end stream`);
+  processStdout.push(null);
+  console.log(`SCRIPT COMPLETE for ${streamClass}.`);
 }
-console.log('Completed pushing data to TestReadableStream processStdout');
-console.log('Pushing null to TestReadableStream processStdout to end stream');
-processStdout.push(null);
-console.log('SCRIPT COMPLETE.');
 
 /* eslint-enable no-console */
 
